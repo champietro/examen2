@@ -8,7 +8,7 @@ comisionA[5] = 2;
 comisionA[6] = 4;
 comisionA[7] = 8;
 comisionA[8] = 6;
-comisionA[9] = 8;
+comisionA[9] = 8; //67
 
 let comisionB: number[] = new Array(10);
 comisionB[0] = 3;
@@ -20,7 +20,7 @@ comisionB[5] = 7;
 comisionB[6] = 7;
 comisionB[7] = 4;
 comisionB[8] = 6;
-comisionB[9] = 8;
+comisionB[9] = 8; //58
 
 let comisionC: number[] = new Array(10);
 comisionC[0] = 7;
@@ -32,20 +32,23 @@ comisionC[5] = 8;
 comisionC[6] = 5;
 comisionC[7] = 7;
 comisionC[8] = 10;
-comisionC[9] = 9;
+comisionC[9] = 9; //78
 
-let promedio :number = 0;
-let promedioA :number = 0;
-let promedioB :number = 0;
-let promedioC :number = 0;
-let comisionN : string;
+let promedio: number = 0;
+let promedioA: number = 0;
+let promedioB: number = 0;
+let promedioC: number = 0;
+let comisionN: string;
 
-let getPromedio = function (comision: number[], promedio: number) {
-  for (let i = 0; i < 11; i++) {
+let getPromedio = function (comision: number[], promedio: number): number {
+  for (let i = 0; i < 10; i++) {
     promedio = promedio + comision[i];
   }
   promedio = promedio / 10;
+  console.log(promedio);
   return promedio;
 };
 
-console.log(getPromedio(comision, promedio));
+promedioA = getPromedio(comisionA, promedio);
+promedioB = getPromedio(comisionA, promedio);
+promedioC = getPromedio(comisionA, promedio);
