@@ -34,6 +34,16 @@ comisionC[7] = 7;
 comisionC[8] = 10;
 comisionC[9] = 9; //78
 
+let menorNota = function (comision: number[]): number {
+  let menor: number = comision[0];
+  for (let i = 0; i < 10; i++) {
+    if (menor > comision[i]) {
+      menor = comision[i];
+    }
+  }
+  return menor;
+};
+
 let desaprobados = function (comision: number[]): number {
   let cant: number = 0;
   for (let i = 0; i < 10; i++) {
@@ -155,3 +165,6 @@ console.log(
 console.log(
   "Cantidad de desaprobados en la comisión C: " + desaprobados(comisionC)
 );
+console.log("Menor nota comisión A: " + menorNota(comisionA));
+console.log("Menor nota comisión B: " + menorNota(comisionB));
+console.log("Menor nota comisión C: " + menorNota(comisionC));
