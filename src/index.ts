@@ -34,6 +34,16 @@ comisionC[7] = 7;
 comisionC[8] = 10;
 comisionC[9] = 9; //78
 
+let desaprobados = function (comision: number[]): number {
+  let cant: number = 0;
+  for (let i = 0; i < 10; i++) {
+    if (comision[i] < 6) {
+      cant = cant + 1;
+    }
+  }
+  return cant;
+};
+
 let getPromedio = function (comision: number[], prom: number): number {
   for (let i = 0; i < 10; i++) {
     prom = prom + comision[i];
@@ -88,4 +98,60 @@ let mayorPromedio = function (
   }
 };
 
+let menorPromedio = function (
+  comisionA: number[],
+  comisionB: number[],
+  comisionC: number[]
+) {
+  const promedio: number = 0;
+  let promedioA: number;
+  let promedioB: number;
+  let promedioC: number;
+
+  promedioA = getPromedio(comisionA, promedio);
+  promedioB = getPromedio(comisionB, promedio);
+  promedioC = getPromedio(comisionC, promedio);
+
+  if (promedioA === promedioB && promedioA === promedioC) {
+    console.log(
+      "El promedio de las 3 comisiones son iguales. Su promedio es: " +
+        promedioA
+    );
+  } else {
+    if (promedioA < promedioB) {
+      if (promedioA < promedioC) {
+        console.log(
+          "El menor promedio lo tiene la comisión A. Promedio: " + promedioA
+        );
+      } else {
+        console.log(
+          "El menor promedio lo tiene la comisión C. Promedio: " + promedioC
+        );
+      }
+    } else {
+      if (promedioA > promedioB) {
+        if (promedioB < promedioC) {
+          console.log(
+            "El menor promedio lo tiene la comisión B. Promedio: " + promedioB
+          );
+        } else {
+          console.log(
+            "El menor promedio lo tiene la comisión C. Promedio: " + promedioC
+          );
+        }
+      }
+    }
+  }
+};
+
 mayorPromedio(comisionA, comisionB, comisionC);
+menorPromedio(comisionA, comisionB, comisionC);
+console.log(
+  "Cantidad de desaprobados en la comisión A: " + desaprobados(comisionA)
+);
+console.log(
+  "Cantidad de desaprobados en la comisión B: " + desaprobados(comisionB)
+);
+console.log(
+  "Cantidad de desaprobados en la comisión C: " + desaprobados(comisionC)
+);
