@@ -34,21 +34,23 @@ comisionC[7] = 7;
 comisionC[8] = 10;
 comisionC[9] = 9; //78
 
-let promedio: number = 0;
+const promedio: number = 0;
 let promedioA: number = 0;
 let promedioB: number = 0;
 let promedioC: number = 0;
 let comisionN: string;
 
-let getPromedio = function (comision: number[], promedio: number): number {
+let getPromedio = function (comision: number[], prom: number): number {
   for (let i = 0; i < 10; i++) {
-    promedio = promedio + comision[i];
+    prom = prom + comision[i];
   }
-  promedio = promedio / 10;
-  console.log(promedio);
-  return promedio;
+  prom = prom / 10;
+  return prom;
 };
 
 promedioA = getPromedio(comisionA, promedio);
+console.log(promedioA);
 promedioB = getPromedio(comisionA, promedio);
+console.log(promedioB);
 promedioC = getPromedio(comisionA, promedio);
+console.log(promedioC);
