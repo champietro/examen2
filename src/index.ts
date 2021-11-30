@@ -56,7 +56,7 @@ let mayorPromedio = function (
   promedioB = getPromedio(comisionB, promedio);
   promedioC = getPromedio(comisionC, promedio);
 
-  if (promedioA == promedioB && promedioA == promedioC) {
+  if (promedioA === promedioB && promedioA === promedioC) {
     console.log(
       "El promedio de las 3 comisiones son iguales. Su promedio es: " +
         promedioA
