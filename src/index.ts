@@ -34,11 +34,11 @@ comisionC[7] = 7;
 comisionC[8] = 10;
 comisionC[9] = 9;
 
-let promedio = (number = 0);
-let promedioA = (number = 0);
-let promedioB = (number = 0);
-let promedioC = (number = 0);
-let comisionN = string;
+let promedio :number = 0;
+let promedioA :number = 0;
+let promedioB :number = 0;
+let promedioC :number = 0;
+let comisionN : string;
 
 let getPromedio = function (comision: number[], promedio: number) {
   for (let i = 0; i < 11; i++) {
